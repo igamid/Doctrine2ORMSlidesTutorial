@@ -14,4 +14,4 @@ $em->persist($greeting);
 //Flushing all changes to database
 $em->flush();
 
-echo 'OK!';
+echo 'OK!' . PHP_EOL;

@@ -17,5 +17,5 @@ if($user) {
         echo 'Could not find any comments to remove...' . PHP_EOL;
     }
 } else {
-    echo 'Could not find Entity\User with id=1';
+    echo 'Could not find Entity\User with id=1' . PHP_EOL;
 }

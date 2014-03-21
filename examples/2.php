@@ -8,7 +8,7 @@ $greeting = $em->find('Entity\Greeting', 1);
 if($greeting) {
     //The EntityManager has already provided us an object of type Entity\Greeting!
     echo 'Found a greeting (instance of ' . get_class($greeting)
-        . ') with content ' . $greeting->getContent();
+        . ') with content ' . $greeting->getContent() . PHP_EOL;
 }else{
-    echo 'Couldn\'t find Greeting with id=1';
+    echo 'Couldn\'t find Greeting with id=1' . PHP_EOL;
 }

@@ -14,5 +14,5 @@ if($greeting) {
     $em->flush();
     echo 'Now try loading 2.php again!' . PHP_EOL;
 }else{
-    echo 'Couldn\'t find Greeting with id=1';
+    echo 'Couldn\'t find Greeting with id=1' . PHP_EOL;
 }

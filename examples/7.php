@@ -17,4 +17,4 @@ $user->addComment($comment);
 //Flushing all changes to database
 $em->flush();
 
-echo 'OK!';
+echo 'OK!' . PHP_EOL;

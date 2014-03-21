@@ -10,12 +10,12 @@ if($user) {
     echo 'Found an Entity\User: ' . PHP_EOL
         . $user->getId() . ' => ' . $user->getLogin() . '(' . get_class($user) . ')' . PHP_EOL
         . 'and ' . $user->getComments()->count() . ' Entity\Comment attached to it: ' . PHP_EOL;
-    echo 'Adding a Comment to the user';
+    echo 'Adding a Comment to the user' . PHP_EOL;
     $comment = new Comment('Comment generated at ' . time());
     $em->persist($comment);
     $user->addComment($comment);
     $em->flush();
-    echo 'Comment has been attached to the user, try 8.php!';
+    echo 'Comment has been attached to the user, try 8.php!' . PHP_EOL;
 } else {
-    echo 'Could not find Entity\User with id=1';
+    echo 'Could not find Entity\User with id=1' . PHP_EOL;
 }
