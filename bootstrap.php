@@ -8,8 +8,7 @@ use Doctrine\ORM\Tools\Setup,
     Doctrine\Common\ClassLoader;
 
 //autoloading
-require_once __DIR__ . '/library/doctrine-orm/lib/Doctrine/ORM/Tools/Setup.php';
-Setup::registerAutoloadGit(__DIR__ . '/library/doctrine-orm');
+require_once __DIR__ . '/vendor/autoload.php';
 $loader = new ClassLoader('Entity', __DIR__ . '/library');
 $loader->register();
 $loader = new ClassLoader('EntityProxy', __DIR__ . '/library');
@@ -24,7 +23,7 @@ $config->setProxyNamespace('EntityProxy');
 $config->setAutoGenerateProxyClasses(true);
 
 //mapping (example uses annotations, could be any of XML/YAML or plain PHP)
-AnnotationRegistry::registerFile(__DIR__ . '/library/doctrine-orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
+AnnotationRegistry::registerFile(__DIR__ . '/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
 $driver = new Doctrine\ORM\Mapping\Driver\AnnotationDriver(
     new Doctrine\Common\Annotations\AnnotationReader(),
     array(__DIR__ . '/library/Entity')
